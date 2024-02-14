@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ifood/Screens/CustomWidgets/menuInferior.dart';
 import 'package:ifood/Screens/Profile/profileScreen.dart';
+import 'package:ifood/Screens/busca/search_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
 //lista de pagina
 List<Widget> telas = const [
   Text('Home'),
-  Text('Busca'),
+  TelaBusca(),
   Text('Pedidos'),
   ProfileScreen(),
 ];
@@ -33,19 +34,9 @@ List<Widget> telas = const [
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child:telas.elementAt(itemSelecionado) ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: itemSelecionado,
-        onTap: nextStation,
-        selectedItemColor:  Colors.black,
-        unselectedItemColor:Colors.black,
-        items: [
-          menuInferior(Icons.home, 'home'),
-          menuInferior(Icons.search, 'Busca'),
-          menuInferior(Icons.shopping_cart, 'Pedidos'),
-          menuInferior(Icons.person, 'Perfil'),
-        ],
-      ),
+        child:telas.elementAt(itemSelecionado),
+         ),
+         bottomNavigationBar: bottomNavigationBar(itemSelecionado, nextStation),
     );
   }
 }
