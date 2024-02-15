@@ -38,3 +38,12 @@ TextStyle textNunitoBold(double tamanho){
     fontSize: tamanho,
     fontWeight: FontWeight.w700);
 }
+
+
+TextStyle textNunitoWhiteBold(double tamanho){
+  return GoogleFonts.nunitoSans(
+    color: Colors.white,
+    fontSize: tamanho,
+    fontWeight: FontWeight.bold,
+  );
+}

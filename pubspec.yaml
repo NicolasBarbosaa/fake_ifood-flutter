@@ -60,6 +60,24 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+  - assets/bebidas.png
+  - assets/cafe.png
+  - assets/bolo.png
+  - assets/pizza.png
+  - assets/carnes.png
+  - assets/farmacia.png
+  - assets/hotDog.png
+  - assets/lanches.png
+  - assets/marmita.png
+  - assets/mercado.png
+  - assets/peixes.png
+  - assets/pet.png
+  - assets/sopas.png
+  - assets/sorvete.png
+  - assets/sucos.png
+  - assets/tapioca.png
+  - assets/acai.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
