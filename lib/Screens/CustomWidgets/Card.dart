@@ -4,7 +4,7 @@ import 'package:ifood/Screens/CustomWidgets/Style.dart';
 
 Widget card(double largura,double altura, Color color, String texto, String img){
   return Container(
-    margin: EdgeInsets.fromLTRB(8, 8, 0, 0),
+    margin: const EdgeInsets.fromLTRB(8, 8, 0, 0),
     width: largura,
     height: altura,
     decoration: BoxDecoration(
@@ -52,7 +52,7 @@ Widget cardDois(double largura,double altura, Color? color, String texto, String
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Image.asset(img, width: 64, height: 64,),
+          child: Image.asset(img, width: 40, height: 40,),
         ),
       ]),
     ),

@@ -14,7 +14,7 @@ class _TelaIncioState extends State<TelaIncio> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("R. Ari Barroso"),
+        title: const Text("R. Ari Barroso"),
         centerTitle: true,
         actions: const [
           Padding(
@@ -27,8 +27,8 @@ class _TelaIncioState extends State<TelaIncio> {
         children: [
           Row(
             children: [
-              card(190, 80, Colors.grey, "Pet", "assets/pet.png"),
-              card(190, 80, Colors.grey, "Mercado", "assets/mercado.png"),
+              card(190, 90, Colors.grey, "Pet", "assets/pet.png"),
+              card(190, 90, Colors.grey, "Mercado", "assets/mercado.png"),
             ],
           ), 
           Padding(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' show CircleAvatar, NetworkImage, Widget;
+// ignore: implementation_imports
 import 'package:flutter/src/widgets/basic.dart';
 
 Widget circleAvatar(String img){
