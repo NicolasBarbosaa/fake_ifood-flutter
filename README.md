@@ -15,7 +15,12 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+<h1>Home Page</h1>
 
 ![Imagem da área de home](https://github.com/NicolasBarbosaa/fake_ifood-flutter/blob/main/Screenshot_5.png?raw=true)
+<h1>Search Screen</h1>
+
 ![Imagem da área de pesquisa](https://github.com/NicolasBarbosaa/fake_ifood-flutter/blob/main/Screenshot_2.png?raw=true)
+<h1>Profile</h1>
+
 ![Imagem da página de perfil](https://github.com/NicolasBarbosaa/fake_ifood-flutter/blob/main/Screenshot_3.png?raw=true)
