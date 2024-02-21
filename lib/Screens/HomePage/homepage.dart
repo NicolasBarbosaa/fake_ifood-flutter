@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ifood/Screens/CustomWidgets/menuInferior.dart';
 import 'package:ifood/Screens/Profile/profileScreen.dart';
 import 'package:ifood/Screens/busca/search_screen.dart';
+import 'package:ifood/Screens/telaInicio/telaInicio.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
 
 //lista de pagina
 List<Widget> telas = const [
-  Text('Home'),
+  TelaIncio(),
   TelaBusca(),
   Text('Pedidos'),
   ProfileScreen(),

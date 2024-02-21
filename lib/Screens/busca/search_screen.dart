@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ifood/Screens/CustomWidgets/Style.dart';
 import 'package:ifood/Screens/CustomWidgets/Card.dart';
+import 'package:ifood/Screens/CustomWidgets/dados_cart.dart';
 
 class TelaBusca extends StatelessWidget {
   const TelaBusca({super.key});
@@ -43,6 +44,10 @@ class TelaBusca extends StatelessWidget {
                 card(185, 80, Color.fromARGB(255, 111, 0, 255), 'Marmita', 'assets/marmita.png'),
                 card(185, 80, Color.fromARGB(255, 111, 0, 255), 'Suco', 'assets/sucos.png'),
                 card(185, 80, Color.fromARGB(255, 111, 0, 255), 'Sopas', 'assets/sopas.png'),
+                /*DadosCart.infoCards.
+              map((e) => card(e["largura"], e["altura"], e["cor"], e["texto"], e["imagem"]) )
+              .toList(),
+              metodo alternativo para puxar uma lista de cards do documento "dados_card.dart"*/
               ],
             )
           ],
