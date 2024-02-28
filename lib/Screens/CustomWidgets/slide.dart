@@ -10,20 +10,19 @@ class Slide extends StatefulWidget {
 }
 
 class _SlideState extends State<Slide> {
-  PageController pageController = PageController();
-  List<double> progresso = [0.0, 0.0, 0.0];
-  int qtdPaginas = 3;
+   PageController pageController = PageController();
+  List<double> progresso = [0.0, 0.0, 0.0, 0.0];
+  int qtdPaginas = 4;
   int paginaAtual = 0;
 
-//metodo que é chamado antes da pagina ser construída para o efeito
-//acontecer logo de carregada
+  //Método que é chamado antes da página ser constrúida
+
   @override
   void initState() {
     super.initState();
     nextPage();
   }
 
-//metodo para mudar de pagina periodicamente
   nextPage() {
     Timer.periodic(const Duration(seconds: 3), (timer) {
       //variavel para comparar com a quantidade de paginas
@@ -36,7 +35,7 @@ class _SlideState extends State<Slide> {
 
       pageController
           .animateToPage(proximaPagina,
-              duration: Duration(milliseconds: 300), curve: Curves.linear)
+              duration: const Duration(milliseconds: 300), curve: Curves.linear)
           .then((_) {
         setState(() {
           paginaAtual = proximaPagina;
@@ -46,7 +45,7 @@ class _SlideState extends State<Slide> {
     });
   }
 
-//iniciar o progresso
+  //iniciar o progresso
   void iniciarProgresso() {
     Timer.periodic(const Duration(milliseconds: 50), (timer) {
       setState(() {
@@ -59,7 +58,8 @@ class _SlideState extends State<Slide> {
     });
   }
 
-//metodo para resetar a animação
+  //método para resetar a animação
+
   void reset() {
     for (int i = 0; i < qtdPaginas; i++) {
       progresso[i] = 0.0;
@@ -67,7 +67,8 @@ class _SlideState extends State<Slide> {
     iniciarProgresso();
   }
 
-//metodo para criar um indicator
+  //método para criar o indicator
+
   List<Widget> buildIndicator() {
     List<Widget> lista = [];
     for (int i = 0; i < qtdPaginas; i++) {
@@ -79,55 +80,66 @@ class _SlideState extends State<Slide> {
           borderRadius: BorderRadius.circular(8),
           value: progresso[i],
           backgroundColor: Colors.grey[200],
-          valueColor: AlwaysStoppedAnimation<Color>(
-              paginaAtual == i ? Colors.blue : Colors.grey),
+          valueColor: AlwaysStoppedAnimation<Color>(paginaAtual == i? Colors.blue: Colors.grey),
         ),
       ));
     }
-
     return lista;
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.all(16),
-        width: double.infinity,
-        height: 150,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
-        child: Stack(
-          alignment: AlignmentDirectional.bottomCenter,
-          children: [
-            PageView(controller: pageController, children: [
-              Container(
-                width: double.infinity,
-                height: 200,
-                color: Colors.orange,
-              ),
-              Container(
-                width: double.infinity,
-                height: 200,
-                color: Colors.black,
-              ),
-              Container(
-                width: double.infinity,
-                height: 200,
-                color: Colors.pink,
-              ),
-              Container(
-                width: double.infinity,
-                height: 200,
-                color: Colors.cyan,
-              ),
-            ]),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: buildIndicator(),
-              ),
+      margin: const EdgeInsets.all(16),
+      width: double.infinity,
+      height: 200,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
+      child: Stack(
+        alignment: AlignmentDirectional.bottomCenter,
+        children: [
+          PageView(controller: pageController, children: [
+            SizedBox(
+               width: double.infinity,
+            height: 200,
+            child: Image.asset(
+            'assets/pizza.gif',
+              fit: BoxFit.cover, 
             )
-          ],
-        ));
+            ),
+            SizedBox(
+               width: double.infinity,
+            height: 200,
+            child: Image.asset(
+            'assets/sanduiche.gif',
+              fit: BoxFit.cover, 
+            )
+            ),
+            SizedBox(
+                 width: double.infinity,
+            height: 200,
+            child: Image.asset(
+            'assets/carne.gif',
+              fit: BoxFit.cover, 
+            )
+            ),
+             SizedBox(
+                 width: double.infinity,
+            height: 200,
+            child: Image.asset(
+            'assets/massa.gif',
+              fit: BoxFit.cover, 
+            )
+            ),
+          ]),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: buildIndicator(),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
