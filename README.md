@@ -17,10 +17,13 @@ samples, guidance on mobile development, and a full API reference.
 
 <h1>Home Page</h1>
 
-![Imagem da área de home](https://github.com/NicolasBarbosaa/fake_ifood-flutter/blob/main/Screenshot_5.png?raw=true)
+![Imagem da área de home](https://github.com/NicolasBarbosaa/fake_ifood-flutter/blob/main/WhatsApp%20Image%202024-02-28%20at%2017.16.44%20(1).jpeg?raw=true)
 <h1>Search Screen</h1>
 
-![Imagem da área de pesquisa](https://github.com/NicolasBarbosaa/fake_ifood-flutter/blob/main/Screenshot_2.png?raw=true)
+![Imagem da área de pesquisa](https://github.com/NicolasBarbosaa/fake_ifood-flutter/blob/main/WhatsApp%20Image%202024-02-28%20at%2017.16.51.jpeg?raw=true)
 <h1>Profile</h1>
 
-![Imagem da página de perfil](https://github.com/NicolasBarbosaa/fake_ifood-flutter/blob/main/Screenshot_3.png?raw=true)
+![Imagem da página de perfil](https://github.com/NicolasBarbosaa/fake_ifood-flutter/blob/main/WhatsApp%20Image%202024-02-28%20at%2017.17.06.jpeg?raw=true)
+<h1>Requests</h1>
+
+![Imagem da pagina dos pedidos](https://github.com/NicolasBarbosaa/fake_ifood-flutter/blob/main/WhatsApp%20Image%202024-02-28%20at%2018.59.36.jpeg?raw=true)
